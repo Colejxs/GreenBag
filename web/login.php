@@ -45,7 +45,7 @@ function login() {
     } else {
         var settings = {
             'async': true,
-            'url': 'api/authenticate.php?email=' + $('#email').val() + '&password=' + $('#password').val(),
+            'url': 'api/loginRequest.php?email=' + $('#email').val() + '&password=' + $('#password').val(),
             'method': 'POST',
             'headers': {
                 'Cache-Control': 'no-cache'
@@ -63,5 +63,6 @@ function login() {
         });
     }
 }
+</script>
 
 

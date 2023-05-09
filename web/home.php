@@ -5,8 +5,29 @@
         <ul>
             <li><a href="#">Home</a></li>
             <li><a href="index.php?content=testList">Shopping Cart</a></li>
-            <li><a href="index.php?content=login">Sign In</a></li>
-            <li><a href="index.php?content=register">Sign Up</a></li>
+            <?php if(!isset(['userId'])) : ?>
+                <li><a href="index.php?content=register">Sign Up</a></li>
+                <li><a href="index.php?content=login">Sign In</a></li>
+            <?php endif ?>
+
+            <?php if(isset(['userId'])) : ?>
+
+            session_start();
+            if(isset($_SESSION['userId'])) {
+                echo $_SESSION["firstName"];
+                echo $_SESSION["lastName"];
+            } else {
+                echo '<li><a href="index.php?content=login">Sign In</a></li>';
+                echo '<li><a href="index.php?content=register">Sign Up</a></li>';
+
+            }
+            ?>
+
+    
+            
+            
+            
+            
         </ul>
     </header>
     <div class="content">
