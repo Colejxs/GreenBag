@@ -68,7 +68,7 @@ body
     opacity: 0.9;
 }
 
-.content
+.container .drop .content
 {
     position: relative;
     display: flex;
@@ -81,14 +81,14 @@ body
 
 }
 
-.content h2
+.container .drop .content h2
 {
     position: relative;
     color: #333;
     font-size: 1.5em;
 }
 
-.content form
+.container .drop .content form
 {
     display: flex;
     flex-direction: column;
@@ -96,7 +96,7 @@ body
 
 }
 
-.content form .inputBox
+.container .drop .content form .inputBox
 {
     position: relative;
     width: 225px;
@@ -108,7 +108,7 @@ body
     /* height: 20px; */
 
 }
-.content form .inputBox::before
+.container .drop .content form .inputBox::before
 {
     content: '';
     position: absolute;
@@ -120,7 +120,7 @@ body
     border-radius: 5px;
 }
 
-.content form .inputBox input
+.container .drop .content form .inputBox input
 {
     border: none;
     outline: none;
@@ -131,7 +131,7 @@ body
 }
 .container .drop .content form .inputBox input [type="submit"]
 {
-    color: white;
+    background: rgb(28, 226, 24);
     text-transform: uppercase;
     font-size: 1em;
     cursor: pointer;
@@ -142,7 +142,7 @@ body
 .container .drop .content form .inputBox:Last-child
 {
     width: 150px;
-    background: #2ad936;
+    /* background: #2ad936; */
     box-shadow: inset 2px 5px 10px rgba(0,0,0,0.1), 
     15px 15px 10px rgba(0,0,0,0.05), 
     15px 10px 15px rgba(0,0,0,0.025);

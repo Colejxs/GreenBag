@@ -1,4 +1,4 @@
-<?php
+<?php 
     extract($_REQUEST);
     $conn = get_database_connection();
     $query = <<<SQL
@@ -7,11 +7,20 @@
     SQL;
 
     $result = $conn->query($query);
-    while($record = $result -> fetch_assoc()){
-
-        echo "<h6>";
-        // echo $record['loc_name'];
-        echo $record['sList_product_name'];
-        echo "</h6>";
-    }
 ?>
+<section class="page">
+    <h1 class="listTitle">Shopping List</h1>
+    <h2>Food</h2>
+    <ol class="continuous-list">
+        <?php
+            // while($record = $result -> fetch_assoc() && $result["sList_type"] == "Food"){
+            while($record = $result -> fetch_assoc()){
+                echo "<li>";
+                echo $record['sList_product_name'];
+                echo "</li>";
+            }
+        ?>
+    </ol>
+</section>
+
+    

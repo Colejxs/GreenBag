@@ -1,16 +1,16 @@
 <?php
 
-include('library.php');
+include('../library.php');
 $dbh = get_database_connection();
 $email = mysqli_real_escape_string($dbh, $email);
 $password = mysqli_real_escape_string($dbh, $password);
 
 
 $sql = <<<SQL
-SELECT user_id, user_first_name, user_last_name, user_email, user_password
+SELECT user_id, user_first_name, user_last_name, user_email, user_password, user_active
 FROM Users
-WHERE user_email = "{$email}"
-AND user_password = "{$password}"
+WHERE user_email = '$email'
+AND user_password = '$password'
 SQL;
 
 $result = mysqli_query($dbh, $sql);
@@ -23,11 +23,14 @@ if ($count == 1){
     $_SESSION['userId'] = $row['user_id']; // set data here
     $_SESSION['firstName'] = $row['user_first_name']; // set data here
     $_SESSION['lastName'] = $row['user_last_name']; // set data here
+    $_SESSION['isActive'] = $row['user_active']; // set data here
+
    
 
     session_write_close();
-    
+
     http_response_code(200);
+
 } else{
     http_response_code(401);
 }

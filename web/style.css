@@ -5,7 +5,7 @@
     box-sizing: border-box;
     font-family: sans-serif;
 }
-section
+.home
 {
     position: relative;
     width: 100%;
@@ -42,9 +42,42 @@ header ul
 
 }
 
+header ul ul  
+{
+    position: absolute;
+    max-width: 100%;
+    top: 2.5vh;
+    visibility: hidden;
+    
+    
+
+}
+
+header ul li:hover > ul
+{
+    visibility: visible;
+}
+
+header ul ul  li
+{
+    position: relative;
+    float: none;
+    display: list-item;
+
+    
+
+}
+
 header ul li 
 {
     list-style: none;
+
+    display: inline-block;
+    color: #333;
+    font-weight: 550;
+    margin-left: 40px;
+    font-size: 20px;
+    text-decoration: none;
 }
 
 header ul li a 
@@ -52,11 +85,16 @@ header ul li a
     display: inline-block;
     color: #333;
     font-weight: 550;
-    margin-left: 40px;
+    /* margin-left: 40px; */
     font-size: 20px;
     text-decoration: none;
     
 
+}
+
+header ul li a:hover
+{
+    color: #44e314;
 }
 
 .content 
@@ -87,7 +125,7 @@ header ul li a
 
 .content .textBox h2 span
 {
-    color: #017143;
+    color: #27ce11;
     font-size: 1.2em;
     font-weight: 900;
 
@@ -98,7 +136,7 @@ header ul li a
     display: inline-block;
     margin-top: 20px;
     padding: 8px 20px;
-    background: #017143;
+    background: #27ce11;
     color: #fff;
     border-radius: 40px;
     font-weight: 500;
@@ -164,80 +202,61 @@ header ul li a
     clip-path: circle(600px at bottom right);
 }
 
-/* @media (max-width: 991px)
+.removeDot
 {
-    header
-    {
-        padding: 20px;
-    }
-    header .logo
-    {
-        max-width: 60px;
-    }
+    border: none;
+    background: none;
+    position: absolute;
+    margin-left: 2vh;
+    margin-top: -7%;
+}
 
-    header ul 
-    {
-        display: none;
-        position: relative;
-    }
+.profilePic 
+{
+    size: 10px;
+}
 
-    .toggle
-    {
-        position: relative;
-        width: 30px;
-        height: 30px;
-        cursor: pointer;
-        background: url(menu.png);
-        background-size: 30px;
-        background-position: center;
-        background-repeat: no-repeat;
-    }
 
-    section
-    {
-        padding: 20px 20px 120px;
-    }
 
-    .content
-    {
-        flex-direction: column;
-        margin-top: 100px;
-    }
 
-    .content .textBox h2 
-    {
-        font-size: 2.5em;
-        margin-bottom: 15px;
-    }
-
-    .content .textBox
-    {
-        max-width: 100%;
-    }
-
-    .content .imgBox img 
-    {
-        max-width: 250px;
-    }
-
-    .content .imgBox 
-    {
-        max-width: 100%;
-        justify-content: center;
-
-    }
-
-    .sci 
-    {
-        background: #017143;
-        right: 0;
-        width: 50px;
-        border-top-left-radius: 5px;
-        border-bottom-left-radius: 5px;
-
-    }
-} */
 
 /*******************************************The decision page*********************************************************/
 
 
+/*******************************************The list page*********************************************************/
+.page
+{
+    font-family: cursive;
+    letter-spacing: 0.1rem;
+    background-image: linear-gradient(90deg, #e8b6b6, 2px, rgba(225, 225, 0), 
+    2px, rgba(225, 225, 225, 0)), 
+    linear-gradient(0, #d9eaf3, 1px, rgba(225, 225, 225, 0), 2px, rgba(225, 225, 225, 0));
+    background-position: 4rem 0;
+    background-size: 100% 2.4rem;
+    height: 100vh;
+    color: #111;
+    padding: 2.8rem 0 0 5rem;
+    white-space: nowrap;
+    counter-reset: listCounter;
+}
+
+.listTitle
+{
+    font-size: 3.2rem;
+    font-size: 700;
+    margin-bottom: 0.6rem;
+    border-bottom: 2px solid #111;
+}
+
+.continuous-list
+{
+    
+    font-size: 1.8rem;
+    font-weight: 400;
+    margin-bottom: 2.8rem;
+}
+
+.letters
+{
+    font-family: cursive;
+}

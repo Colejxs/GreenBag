@@ -18,11 +18,12 @@ include('library.php');
     <header>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Page Title</title>
+        <title>GreenBag</title>
         <meta name="viewport" content="width=device-width,initial-scale=1">
         
         <link rel="stylesheet" href="style.css?v=<?php echo rand(); ?>">
         <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <script>
              function showAlert(type, title, message) {
                 $('#alert').hide();
@@ -35,6 +36,9 @@ include('library.php');
     </header>
 <body>
     <!-- Main Content -->
+    <?php
+    print_r($_SESSION);
+    ?>
     <div class="container-fluid mt-3">
             <?php include(get_content() . '.php'); ?>
     </div>

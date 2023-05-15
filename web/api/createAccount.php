@@ -26,6 +26,7 @@ $email = mysqli_real_escape_string($dbh, $email);
 $password = mysqli_real_escape_string($dbh, $password);
 $firstName = mysqli_real_escape_string($dbh, $firstName);
 $lastName = mysqli_real_escape_string($dbh, $lastName);
+$isActive = mysqli_real_escape_string($dbh, $isActive);
 
 $sql = <<<SQL
 SELECT user_id
@@ -44,8 +45,8 @@ echo $count;
 if ($count == 0)
 {
     $sql = <<<SQL
-    INSERT INTO Users (user_email, user_password, user_first_name, user_last_name)
-    VALUES ('{$email}', '{$password}', '{$firstName}', '{$lastName}')
+    INSERT INTO Users (user_email, user_password, user_first_name, user_last_name, user_active)
+    VALUES ('{$email}', '{$password}', '{$firstName}', '{$lastName}', '{$isActive}')
 SQL;
 
 

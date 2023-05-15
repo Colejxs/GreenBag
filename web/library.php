@@ -9,6 +9,8 @@
 
 extract($_REQUEST);
 
+session_start();
+
 /*
  * Returns the content to be included based on the 'content' request parameter, if present.
  */
