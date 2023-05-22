@@ -45,8 +45,8 @@ echo $count;
 if ($count == 0)
 {
     $sql = <<<SQL
-    INSERT INTO Users (user_email, user_password, user_first_name, user_last_name, user_active)
-    VALUES ('{$email}', '{$password}', '{$firstName}', '{$lastName}', '{$isActive}')
+    INSERT INTO Users (user_email, user_password, user_first_name, user_last_name)
+    VALUES ('{$email}', '{$password}', '{$firstName}', '{$lastName}')
 SQL;
 
 

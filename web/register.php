@@ -47,12 +47,6 @@
                 <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Last Name" />
             </div>
         </div>
-        <div class="form-group">
-            <label class="col-sm-3 control-label" for="isActive">Is Activte</label>
-            <div class="col-sm-9">
-                <input type="number" class="form-control" id="isActive" name="isActive" placeholder="Is Active" />
-            </div>
-        </div>
         <div class="container col-md-6 col-md-offset-3">
             <input type="button" id="registerButton" class="btn btn-primary btn-block" value="Create Account" onclick="register()" />
         </div>
@@ -77,7 +71,7 @@ function register() {
     } else {
         var settings = {
             'async': true,
-            'url': 'api/createAccount.php?email=' + $('#email').val() + '&password=' + $('#password').val() + '&firstName=' + $('#firstName').val() + '&lastName=' + $('#lastName').val() + $('#isActive').val(),
+            'url': 'api/createAccount.php?email=' + $('#email').val() + '&password=' + $('#password').val() + '&firstName=' + $('#firstName').val() + '&lastName=' + $('#lastName').val(),
             'method': 'POST',
             'headers': {
                 'Cache-Control': 'no-cache'

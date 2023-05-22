@@ -59,10 +59,12 @@
             </p>
             <?php if(isset($_SESSION['userId'])) : ?>
                 
-                <?php elseif($_SESSION['isActive'] = 0) :?>
+                <?php if($_SESSION['isActive'] = 0) :?>
                     <a href="index.php?content=cancel">Cancel This Week</a>
-                <?php elseif($_SESSION['isActive'] = 1):?>
+                
+                <?php else : ?>
                     <a href="index.php?content=cancel">Activate This Week</a>
+                <?php endif ?>
 
 
             <?php endif ?>

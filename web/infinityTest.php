@@ -11,7 +11,7 @@
 	<div class="square">
 		<i style="--clr:#16f050;"></i>
 		<i style="--clr:#65ec3b;"></i>
-		<i style="--clr:#fffd44;"></i>
+		<i style="--clr:#3aba13;"></i>
 		<div class="login">
 			<h2>Login</h2>
 			<div class="inputBx">
